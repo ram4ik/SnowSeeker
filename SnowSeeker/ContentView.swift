@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationSplitView(preferredCompactColumn: .constant(.detail)) {
+        NavigationSplitView {
             NavigationLink("Primary") {
                 Text("Primary")
             }
