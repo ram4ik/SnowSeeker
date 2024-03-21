@@ -20,10 +20,9 @@ struct ContentView: View {
             selectedUser = User()
             isShowing = true
         }
-        .alert("Welcome", isPresented: $isShowing, presenting: selectedUser) { user in
-            Button(user.id) {
-                
-            }
+        .sheet(item: $selectedUser) { user in
+            Text(user.id)
+                .presentationDetents([.medium, .large])
         }
     }
 }
