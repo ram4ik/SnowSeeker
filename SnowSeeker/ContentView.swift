@@ -7,22 +7,32 @@
 
 import SwiftUI
 
-struct User: Identifiable {
-    var id = "SwiftUI"
+struct UserView: View {
+    var body: some View {
+        Group {
+            Text("SwiftUI")
+            Text("Swift")
+        }
+        .font(.title)
+    }
 }
 
 struct ContentView: View {
-    @State private var selectedUser: User? = nil
-    @State private var isShowing = false
+    @State private var layoutVertically = false
     
     var body: some View {
-        Button("Tap Me") {
-            selectedUser = User()
-            isShowing = true
-        }
-        .sheet(item: $selectedUser) { user in
-            Text(user.id)
-                .presentationDetents([.medium, .large])
+        Button {
+            layoutVertically.toggle()
+        } label: {
+            if layoutVertically {
+                HStack {
+                    UserView()
+                }
+            } else {
+                VStack {
+                    UserView()
+                }
+            }
         }
     }
 }
