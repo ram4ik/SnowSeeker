@@ -10,10 +10,13 @@ import SwiftUI
 @Observable
 class Favorites {
     private var resorts: Set<String>
-    private var key = "Favorites"
     
     init() {
-        resorts = []
+        if let savedResorts = UserDefaults.standard.array(forKey: "Favorites") as? [String] {
+            resorts = Set(savedResorts)
+        } else {
+            resorts = []
+        }
     }
     
     func contains(_ resort: Resort) -> Bool {
@@ -31,6 +34,6 @@ class Favorites {
     }
     
     func save() {
-        
+        UserDefaults.standard.set(Array(resorts), forKey: "Favorites")
     }
 }
