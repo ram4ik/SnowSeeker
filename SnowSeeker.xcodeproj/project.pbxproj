@@ -19,6 +19,7 @@
 		5E1DF7732BAD833300D0EF27 /* SkiDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1DF7722BAD833300D0EF27 /* SkiDetailsView.swift */; };
 		5E1DF7752BAD843800D0EF27 /* ResortDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1DF7742BAD843800D0EF27 /* ResortDetailsView.swift */; };
 		5E1DF7772BAD8B1300D0EF27 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1DF7762BAD8B1300D0EF27 /* Facility.swift */; };
+		5E1DF7792BAD939100D0EF27 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1DF7782BAD939100D0EF27 /* Favorites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		5E1DF7722BAD833300D0EF27 /* SkiDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiDetailsView.swift; sourceTree = "<group>"; };
 		5E1DF7742BAD843800D0EF27 /* ResortDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortDetailsView.swift; sourceTree = "<group>"; };
 		5E1DF7762BAD8B1300D0EF27 /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
+		5E1DF7782BAD939100D0EF27 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				5E1DF7762BAD8B1300D0EF27 /* Facility.swift */,
 				5E1DF7722BAD833300D0EF27 /* SkiDetailsView.swift */,
 				5E1DF7742BAD843800D0EF27 /* ResortDetailsView.swift */,
+				5E1DF7782BAD939100D0EF27 /* Favorites.swift */,
 			);
 			path = SnowSeeker;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				5E1DF76F2BAD7F3700D0EF27 /* WelcomeView.swift in Sources */,
 				5E1DF7732BAD833300D0EF27 /* SkiDetailsView.swift in Sources */,
 				5E1DF7752BAD843800D0EF27 /* ResortDetailsView.swift in Sources */,
+				5E1DF7792BAD939100D0EF27 /* Favorites.swift in Sources */,
 				5E1DF7772BAD8B1300D0EF27 /* Facility.swift in Sources */,
 				5E1DF75D2BACC00900D0EF27 /* ContentView.swift in Sources */,
 				5E1DF76B2BAD6FB300D0EF27 /* Resort.swift in Sources */,
