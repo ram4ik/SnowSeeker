@@ -7,27 +7,27 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State private var searchText = ""
-    let allNames = ["Jonh", "Mark", "Helena", "Viky"]
-    
-    var filteredNames: [String] {
-        if searchText.isEmpty {
-            allNames
-        } else {
-            allNames.filter { name in
-                name.localizedStandardContains(searchText)
-            }
-        }
-    }
+@Observable
+class Player {
+    var name = "Anonymous"
+    var highScore = 0
+}
+
+struct HighScoreView: View {
+    var player: Player
     
     var body: some View {
-        NavigationStack {
-            List(filteredNames, id: \.self) { name in
-                    Text(name)
-            }
-            .searchable(text: $searchText, prompt: "Look for something")
-            .navigationTitle("Searching")
+        Text("Your high score: \(player.highScore)")
+    }
+}
+
+struct ContentView: View {
+    @State private var player = Player()
+    
+    var body: some View {
+        VStack {
+            Text("Welcome!")
+            HighScoreView(player: player)
         }
     }
 }
