@@ -14,7 +14,7 @@ class Player {
 }
 
 struct HighScoreView: View {
-    var player: Player
+    @Environment(Player.self) var player
     
     var body: some View {
         Text("Your high score: \(player.highScore)")
@@ -27,8 +27,9 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Welcome!")
-            HighScoreView(player: player)
+            HighScoreView()
         }
+        .environment(player)
     }
 }
 
