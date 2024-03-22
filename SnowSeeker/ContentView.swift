@@ -7,24 +7,14 @@
 
 import SwiftUI
 
-struct UserView: View {
-    var body: some View {
-        Group {
-            Text("SwiftUI")
-            Text("Swift")
-        }
-        .font(.title)
-    }
-}
-
 struct ContentView: View {
+    @State private var searchText = ""
+    
     var body: some View {
-        ViewThatFits {
-            Rectangle()
-                .frame(width: 500, height: 200)
-            
-            Circle()
-                .frame(width: 200, height: 200)
+        NavigationStack {
+            Text("Search for \(searchText)")
+                .searchable(text: $searchText, prompt: "Look for something")
+                .navigationTitle("Searching")
         }
     }
 }
