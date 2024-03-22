@@ -18,16 +18,14 @@ struct UserView: View {
 }
 
 struct ContentView: View {
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    
     var body: some View {
-      
-        if horizontalSizeClass == .compact {
-            HStack(content: UserView.init)
-        } else {
-            VStack(content: UserView.init)
+        ViewThatFits {
+            Rectangle()
+                .frame(width: 500, height: 200)
+            
+            Circle()
+                .frame(width: 200, height: 200)
         }
-        
     }
 }
 
